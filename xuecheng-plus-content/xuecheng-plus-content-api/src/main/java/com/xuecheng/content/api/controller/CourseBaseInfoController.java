@@ -23,6 +23,7 @@ public class CourseBaseInfoController {
     @PostMapping("/course/list")
     public PageResult<CourseBase> list(PageParams pageParams, @RequestBody QueryCourseParamsDto queryCourseParams){
         PageResult<CourseBase> courseBasePageResult = courseBaseInfoService.queryCourseBaseList(pageParams, queryCourseParams);
+        System.out.println(1);
         return courseBasePageResult;
 
     }
